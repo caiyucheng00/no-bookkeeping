@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tkzj.nobookkeeping.mapper.AccountMapper">
+
+    <resultMap id="accountResultMap" type="com.tkzj.nobookkeeping.entity.Account">
+        <id property="accountId" column="account_id"></id>
+        <result property="accountName" column="account_name"></result>
+        <result property="userId" column="user_id"></result>
+    </resultMap>
+
+    <select id="getAllAccounts" resultMap="accountResultMap">
+        select * from account
+    </select>
+
+    <select id="getAccountByAccountId" resultMap="accountResultMap">
+        select * from account where account_id = ${accountId}
+    </select>
+
+    <select id="getAccountsByUserId" resultMap="accountResultMap">
+        select * from account where user_id = #{userId}
+    </select>
+
+    <insert id="addAccount">
+        insert into account values(null,  #{userId}, #{accountName})
+    </insert>
+
+    <delete id="deleteAccountByAccountId">
+        delete from account where account_id = #{accountId}
+    </delete>
+
+    <update id="updateAccountName">
+        update account set account_name = #{newAccountName} where account_id = #{accountId}
+    </update>
+
+</mapper>

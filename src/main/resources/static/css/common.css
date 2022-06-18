@@ -1,0 +1,95 @@
+/*声明*/
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?7kkyc2');
+    src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+      url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+      url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*引用icomoon字体图标*/
+.icomoon {
+	font-family: 'icomoon';
+	font-size: 16px;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+.all{
+    height: 100%;
+}
+.topBar{
+    height: 50px;
+    background-color: #2FC3D8;
+}
+.name{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #fff;
+    font-family:黑体;
+    margin-left: 20px;
+}
+.user{
+    float:right;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    margin-right:20px;
+}
+.leftList{
+    float: left;
+    background-color: #ADD2F3;
+    width: 15%;
+    height: 100%;
+}
+.listBar{
+    margin-top: 30px;
+}
+ul>li{
+    padding: 10px 20px ;
+    font-size: 16px;
+    
+}
+ul>li>a{
+    font-family: 黑体;
+    color: #fff;
+}
+.rightContent{
+    float: right;
+    width: 85%;
+    height: 100%;
+    background-color: #F9F8F8;
+}
+.rightContent>.select{
+    height: 200px;
+    width: 96%;
+    background-color: #fff;
+    margin: 20px;
+    border: 1px solid #E5E4E4;
+    border-radius: 10px;
+}
+.rightContent>.select>.title{
+    margin: 20px;
+    font-size: 16px;
+}
+.rightContent>.select>.book>li{
+    float: left;
+    
+}
+.rightContent>.select>.book>li>a{
+    color: black;
+    font-size: 12px;
+}
+.rightContent>.select>.book>li>a>i{
+    margin-left: 20px;
+    font-size: 25px;
+}
+.active{
+    background-color: #38A28A;
+}

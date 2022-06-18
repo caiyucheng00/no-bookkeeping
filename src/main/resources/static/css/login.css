@@ -1,0 +1,45 @@
+html,
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #F0F3F7;
+}
+.w{
+    height: 100%;
+    width: 100%;
+}
+.head{
+    margin: 150px auto 20px;
+    text-align: center;
+}
+.head>img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.head>p{
+    color: #8E9192;
+}
+.formArea{
+    margin: 0 auto;
+    text-align: center;
+}
+.formArea>p{
+    margin-right: 210px;
+}
+.formArea>form>input{
+    width: 250px;
+    height: 30px;
+    margin: 10px;
+    border: 1px solid #D9DADA;
+}
+.formArea>form>p{
+    margin-left: 204px;
+    font-size: 10px;
+    color: #2593FC;
+}
+
+.submit{
+    color: #fff;
+    background-color: #1890FF;
+}
