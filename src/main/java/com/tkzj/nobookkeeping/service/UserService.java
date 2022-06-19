@@ -10,5 +10,5 @@ import java.util.List;
  * @date 2022-06-16 8:06
  */
 public interface UserService {
-    boolean queryByNameAndPassword(User user);
+    User queryByNameAndPassword(User user);
 }

@@ -16,12 +16,13 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserMapper employeeMapper;
+    private UserMapper userMapper;
 
 
     @Override
-    public boolean queryByNameAndPassword(User user) {
-        List<User> userList = employeeMapper.queryByNameAndPassword(user);
-        return userList.size() > 0;
+    public User queryByNameAndPassword(User user) {
+        List<User> userList = userMapper.queryByNameAndPassword(user);
+        System.out.println(userList);
+        return userList.get(0);
     }
 }

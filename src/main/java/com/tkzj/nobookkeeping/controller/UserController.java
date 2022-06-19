@@ -24,16 +24,16 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/login")
-    public Result<String> login(@RequestBody Map<String, String> map) {
+    public Result<User> login(@RequestBody Map<String, String> map) {
         log.info(map.get("username"));
         log.info(map.get("password"));
         User user = new User();
         user.setUserName(map.get("username"));
         user.setUserPassword(map.get("password"));
-        boolean isSuccess = userService.queryByNameAndPassword(user);
-        if (isSuccess) {
+        User userExist = userService.queryByNameAndPassword(user);
+        if (userExist != null) {
             log.info("成功登录");
-            return Result.success("成功登录");
+            return Result.success(userExist);
         } else {
             return Result.error("用户名或密码不存在");
         }

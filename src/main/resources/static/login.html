@@ -55,6 +55,8 @@
                 var res = JSON.parse(xmlHttp.responseText);
                 if (res.code === 1) {
                     window.location.href = './index.html'
+                    // 存在cookie中
+                    document.cookie = "userId=" + res.data.userId;
                 } else {
                     window.alert("账号或密码错误")
                 }

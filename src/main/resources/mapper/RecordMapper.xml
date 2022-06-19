@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tkzj.nobookkeeping.mapper.RecordMapper">
+
+    <resultMap id="recordResultMap" type="com.tkzj.nobookkeeping.entity.Record">
+        <id property="recordId" column="record_id"></id>
+        <result property="accountId" column="account_id"></result>
+        <result property="spendType" column="spend_type"></result>
+        <result property="inOut" column="in_out"></result>
+        <result property="date" column="date"></result>
+        <result property="money" column="money"></result>
+        <result property="note" column="note"></result>
+    </resultMap>
+
+    <select id="getRecordsByAccountId" resultMap="recordResultMap">
+        select * from record where account_id = #{accountId} order by date DESC
+    </select>
+
+    <select id="getRecordsByDate1AndDate2" resultMap="recordResultMap">
+        select * from record where Date(date) between #{from} and #{to}
+    </select>
+
+<!--    注意字段的插入顺序-->
+    <insert id="addRecord">
+        insert into record values(null, #{accountId}, #{inOut}, #{spendType}, #{date}, #{money}, #{note})
+    </insert>
+
+    <delete id="deleteByRecordId">
+        delete from record where record_Id = #{recordId}
+    </delete>
+
+
+</mapper>

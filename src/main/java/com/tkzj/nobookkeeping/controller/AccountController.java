@@ -47,7 +47,7 @@ public class AccountController {
     }
 
     @PutMapping
-    public Result<String> updateAccoountName(@RequestBody Account account) {
+    public Result<String> updateAccountName(@RequestBody Account account) {
         boolean flag = accountService.updateAccountName(account.getAccountId(), account.getAccountName());
         if (flag) {
             return Result.success("账单名修改成功！");

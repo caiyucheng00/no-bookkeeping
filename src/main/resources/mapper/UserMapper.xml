@@ -3,8 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tkzj.nobookkeeping.mapper.UserMapper">
-    
-    <select id="queryByNameAndPassword" resultType="com.tkzj.nobookkeeping.entity.User">
+
+
+    <resultMap id="userResultMap" type="com.tkzj.nobookkeeping.entity.User">
+        <id property="userId" column="user_id"></id>
+        <result property="userName" column="user_name"></result>
+        <result property="userPassword" column="user_password"></result>
+        <result property="userEmail" column="user_email"></result>
+    </resultMap>
+
+    <select id="queryByNameAndPassword" resultMap="userResultMap">
         select *
         from `user`
         where  `user_name` = #{user.userName} and  `user_password` = #{user.userPassword}

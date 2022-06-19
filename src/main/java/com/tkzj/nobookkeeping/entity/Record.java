@@ -5,7 +5,8 @@ import lombok.Data;
 @Data
 public class Record {
     int recordId;
-    SpendType spendType;
+    int spendType;
+    int inOut;
     String date;
     double money;
     String note;
