@@ -32,20 +32,19 @@ body{
     height: 30px;
     margin: 10px;
     border: 1px solid #D9DADA;
+    border-radius: 7px;
 }
-
-.formArea>form>p{
-    margin-left: 204px;
+.formArea .submit{
+    width: 110px;
+    /*margin-left: -134px;*/
+}
+.formArea>form>a{
+    margin-left: 45px;
     font-size: 10px;
     color: #2593FC;
 }
 
 .submit{
-    width: 250px;
-    height: 30px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 30px;
     color: #fff;
     background-color: #1890FF;
 }

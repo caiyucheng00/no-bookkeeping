@@ -15,8 +15,8 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    @GetMapping("/{userId}")
-    public Result<List<Account>> showAllAccounts(@PathVariable int userId) {
+    @GetMapping("/userId")
+    public Result<List<Account>> showAllAccounts(int userId) {
         List<Account> accountList = accountService.getAllAccounts(userId);
 
         if (accountList.size() > 0) {

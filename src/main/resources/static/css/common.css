@@ -66,30 +66,7 @@ ul>li>a{
     height: 100%;
     background-color: #F9F8F8;
 }
-.rightContent>.select{
-    height: 200px;
-    width: 96%;
-    background-color: #fff;
-    margin: 20px;
-    border: 1px solid #E5E4E4;
-    border-radius: 10px;
-}
-.rightContent>.select>.title{
-    margin: 20px;
-    font-size: 16px;
-}
-.rightContent>.select>.book>li{
-    float: left;
-    
-}
-.rightContent>.select>.book>li>a{
-    color: black;
-    font-size: 12px;
-}
-.rightContent>.select>.book>li>a>i{
-    margin-left: 20px;
-    font-size: 25px;
-}
+/* 导航栏高亮 */
 .active{
     background-color: #38A28A;
 }

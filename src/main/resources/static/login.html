@@ -22,48 +22,15 @@
     <div class="formArea">
         <p>请登录</p>
         <form>
-            <input type="text" name="username" placeholder="用户名" id="username" autocomplete='username'>
+            <input type="text" name="username" placeholder="用户名" id="username" autocomplete='username' value="root">
             <br>
-            <input type="password" name="password" placeholder="密码" id="password" autocomplete='new-password'>
+            <input type="password" name="password" placeholder="密码" id="password" autocomplete='new-password' value="root">
             <p>忘记密码</p>
-            <!--                <input type="submit" class="submit" value="登录" onclick=resAJAXPost()>-->
-            <div class="submit" onclick="resAJAXPost()">登录</div>
+            <div type="submit" class="submit" onclick=resAJAXPost()>登录</div>
             <p>注册账户</p>
         </form>
     </div>
 </div>
-<!--<script type="text/javascript" src="./js/login.js"></script>-->
-<script>
-    var xmlHttp = new XMLHttpRequest();
-
-    //POST
-    function sendAJAXPost(callback) {
-        let inputName = document.getElementById("username")
-        let username = inputName.value
-        let inputPassword = document.getElementById("password")
-        let password = inputPassword.value
-
-        xmlHttp.onreadystatechange = callback;
-        xmlHttp.open("POST", "/user/login");
-        xmlHttp.setRequestHeader("Content-type", "application/json;charset=UTF-8");
-        xmlHttp.send(JSON.stringify({"username": username, "password":password}));
-    }
-
-    function resAJAXPost() {
-        sendAJAXPost(function () {
-            if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
-                var res = JSON.parse(xmlHttp.responseText);
-                if (res.code === 1) {
-                    window.location.href = './index.html'
-                    // 存在cookie中
-                    document.cookie = "userId=" + res.data.userId;
-                } else {
-                    window.alert("账号或密码错误")
-                }
-            }
-        })
-    }
-</script>
-
+<script type="text/javascript" src="./js/login.js"></script>
 </body>
 </html>

@@ -1,0 +1,59 @@
+.searchArea{
+    background-color: #fff;
+    height: 100px;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    margin: 20px;
+}
+.firstline{
+    margin: 10px;
+}
+.firstline input{
+    height: 25px;
+    border: 1px solid #D3D3D3;;
+}
+.firstline button{
+    height: 27px;
+    width: 80px;
+    background-color: #38A28A;
+    color:#fff;
+    border: 0px;
+    border-radius: 2px;
+}
+.secondline{
+    display: flex;
+    margin: 20px 10px;
+}
+.secondline>*{
+    text-align: center;
+    flex-grow:1;
+}
+.secondline>button{
+    background-color: #38A28A;
+    color: #fff;
+    border: 0px;
+    border-radius: 2px;
+    margin: 0 5px;
+}
+
+.table{
+    background-color: #fff;
+    height: 100px;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    margin: 20px;
+}
+table{
+    width: 100%;
+}
+th,td{
+    font-size: 12px;
+    border: 0px;
+    text-align: center;
+} 
+thead tr{
+    background-color: #f2f2f2;
+} 
+tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}

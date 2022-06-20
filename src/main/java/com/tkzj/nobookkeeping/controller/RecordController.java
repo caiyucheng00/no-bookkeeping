@@ -16,8 +16,8 @@ public class RecordController {
     @Autowired
     private RecordServiceImpl recordServiceImpl;
 
-    @GetMapping("/{accountId}")
-    public Result<List<Record>> showAllRecordsOfCurrentAccount(@PathVariable int accountId) {
+    @GetMapping("/accountId")
+    public Result<List<Record>> showAllRecordsOfCurrentAccount(int accountId) {
         List<Record> list = recordServiceImpl.showRecordsOfCurrentAccount(accountId);
         if (list.size() > 0) {
             return Result.success(list);
@@ -48,8 +48,8 @@ public class RecordController {
         }
     }
 
-    @DeleteMapping("/{recordId}")
-    public Result<String> deleteRecordByRecordId(@PathVariable int recordId) {
+    @DeleteMapping("/recordId")
+    public Result<String> deleteRecordByRecordId(int recordId) {
         boolean flag = recordServiceImpl.deleteRecordByRecordId(recordId);
         if (flag) {
             return Result.success("记录删除成功");

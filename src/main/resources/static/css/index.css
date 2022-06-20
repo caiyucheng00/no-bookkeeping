@@ -1,0 +1,31 @@
+.rightContent>.select{
+    height: 200px;
+    width: 96%;
+    background-color: #fff;
+    margin: 20px;
+    border: 1px solid #E5E4E4;
+    border-radius: 10px;
+}
+.rightContent>.select>.titleBar{
+    height: 20px;
+    margin: 20px 0;
+    font-size: 16px;
+}
+.rightContent>.select>.titleBar>div{
+    float: left;
+    margin-left: 20px;
+}
+.rightContent>.select>.book>li{
+    float: left;
+}
+.rightContent>.select>.book>li>a{
+    color: black;
+    font-size: 12px;
+}
+.rightContent>.select>.book>li>a>i{
+    font-size: 25px;
+}
+.rightContent>.select>.book>li>a>p{
+    margin: 0 auto;
+    text-align: center;
+}

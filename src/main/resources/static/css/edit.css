@@ -1,0 +1,80 @@
+.rightContent>.select{
+    font-size: 14px;
+    height: 500px;
+    width: 96%;
+    background-color: #fff;
+    margin: 20px;
+    border: 1px solid #E5E4E4;
+    border-radius: 10px;
+}
+.rightContent .select div{
+    margin-left: 30px;
+    margin-bottom: -20px;
+    font-weight: 700;
+}
+.rightContent>.select>.title{
+    margin: 20px;
+    font-size: 16px;
+}
+.rightContent>.select>.book>li{
+    float: left;
+    
+}
+.rightContent>.select>.book>li>a{
+    color: black;
+    font-size: 12px;
+}
+.rightContent>.select>.book>li>a>i{
+    margin-left: 20px;
+    font-size: 25px;
+}
+.active{
+    background-color: #38A28A;
+}
+.select input{
+    width: 300px;
+    height: 40px;
+    margin: 10px;
+    border: 1px solid #D9DADA;
+    border-radius: 7px;
+    line-height:30px
+}
+.select>.time>input{
+    width: 110px
+}
+.select>.time>.text4{
+    margin-left: 68px;
+}
+
+.select .button{
+    margin-top: 30px;
+
+}
+.select .confirm {
+    width: 100px;
+    height: 40px;
+    margin-left: 70px;
+    border: 1px solid #D9DADA;
+    border-radius: 7px;
+    line-height:30px;
+    background-color: #1890FF;
+}
+.select .cancel{
+    width: 50px;
+    height: 40px;
+    margin-left: 30px;
+    border: 1px solid #D9DADA;
+    border-radius: 7px;
+    line-height:30px
+}
+.select .detail{
+    height: 70px;
+}
+
+.select select{
+    width: 300px;
+    height: 40px;
+    margin: 10px;
+    border: 1px solid #D9DADA;
+    border-radius: 7px;
+}

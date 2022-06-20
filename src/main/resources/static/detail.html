@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不想记账-全世界最好的记账工具</title>
+    <meta name="description" content="不想记账，天坑自救小组专业团队开发，为您提供最好的记账服务
+    功能囊括注册、登录、选择账本、记录账目、修改账目、删除账目、修改用户名、注销登录等">
+    <meta name="keywords" content="不想记账，记账，在线服务，云端存储">
+    <link rel="icon" href="favicon.ico" sizes="50x50">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/detail.css">
+</head>
+<body>
+    <div class="all">
+        <div class="topBar">
+            <div class="name">不想记账</div>
+            <div class="user">
+                <a href="set.html" id="avatar">头像</a>
+                <a href="set.html" id="userName">用户名</a>
+            </div>
+        </div>
+        <div class="leftList">
+            <ul class="listBar">
+                <li><i class="icomoon">  </i>我的账本</a></li>
+                <li class="active"><a href="detail.html"><i class="icomoon">  </i>账本详情</a></li>
+                <li><i class="icomoon">  </i>项目详情</a></li>
+                <li><i class="icomoon">  </i>设置</a></li>
+            </ul>
+        </div>
+        <div class="rightContent">
+            <div class="searchArea">
+                <div class="firstline">
+                    <input type="text" class="getId" id="getId" placeholder="请输入订单ID">
+                    <button onclick="searchBill()">搜索</button>
+                </div>
+                <div class="secondline">
+                    <label for="in&out">账单类型</label><select name="in&out" id="in&out">
+                        <option >收入</option>
+                        <option >支出</option>
+                    </select>
+                    <label for="">账单时间从</label><input type="date" name="startTime" id="startTime" >
+                    <label for="">&nbsp到&nbsp</label><input type="date" name="endTime" id="endTime" >
+                    <button onclick="selectBill()">筛选</button>
+                    <button onclick="window.location.href = 'edit.html'">记一笔</button>
+                </div>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>创建时间</th>
+                            <th>账单类型</th>
+                            <th>分类</th>
+                            <th>账单备注</th>
+                            <th>金额</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+<!--                        <tr>-->
+<!--                            <td>1</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>编辑</td>-->
+<!--                            <td>删除</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>2</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>编辑</td>-->
+<!--                            <td>删除</td>-->
+<!--                        </tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/detail.js"></script>
+</body>
+</html>
