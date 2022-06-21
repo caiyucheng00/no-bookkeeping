@@ -37,12 +37,12 @@
                     <button onclick="searchBill()">搜索</button>
                 </div>
                 <div class="secondline">
-                    <label for="in&out">账单类型</label><select name="in&out" id="in&out">
-                        <option >收入</option>
+                    <label for="inOut">账单类型</label><select name="inOut" id="inOut">
                         <option >支出</option>
+                        <option >收入</option>
                     </select>
-                    <label for="">账单时间从</label><input type="date" name="startTime" id="startTime" >
-                    <label for="">&nbsp到&nbsp</label><input type="date" name="endTime" id="endTime" >
+                    <label for="startTime">账单时间从</label><input type="date" name="startTime" id="startTime" >
+                    <label for="endTime">&nbsp到&nbsp</label><input type="date" name="endTime" id="endTime" >
                     <button onclick="selectBill()">筛选</button>
                     <button onclick="window.location.href = 'edit.html'">记一笔</button>
                 </div>

@@ -4,13 +4,16 @@ package com.tkzj.nobookkeeping.controller;
 import com.tkzj.nobookkeeping.dto.Result;
 import com.tkzj.nobookkeeping.entity.Record;
 import com.tkzj.nobookkeeping.service.impl.RecordServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
+@Slf4j
 @RequestMapping("/records")
 public class RecordController {
     @Autowired
@@ -26,9 +29,9 @@ public class RecordController {
         }
     }
 
-    @GetMapping("/{accountId}/{from}/{to}")
-    public Result<List<Record>> showRecordsFromDate1AndDate2(@PathVariable("from") String from, @PathVariable("to") String to) {
-        List<Record> list = recordServiceImpl.showRecordsOfSelectedDates(from, to);
+    @PostMapping("/select")
+    public Result<List<Record>> showRecordsFromDate1AndDate2(@RequestBody Map<String,Object> map) {
+        List<Record> list = recordServiceImpl.showRecordsOfSelectedDates(Integer.parseInt((String) map.get("accountId")), (int)map.get("inOut"),map.get("startTime") + " 00:00:00",map.get("endTime") + " 00:00:00");
         if (list.size() > 0) {
             return Result.success(list);
         } else {

@@ -14,14 +14,7 @@ function sendAJAXPost(accountId,note,money,dateTime,inOutNum,typeNum,callback) {
         "note" : note
     }));
 }
-/* function resAJAXPost() {
-    sendAJAXPost(function () {
-        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
-            var res = JSON.parse(xmlHttp.responseText);
-            window.alert(res.data);
-        }
-    })
-} */
+
 function submitBill(){
     let accountId = localStorage.getItem("accountId")
     let note = document.getElementById("note").value
@@ -85,5 +78,5 @@ function submitBill(){
 window.onload = function(){
     // 显示用户名
     var userIdDon = document.getElementById('userName')
-    userIdDon.innerHTML = localStorage.getItem("userID")
+    userIdDon.innerHTML = localStorage.getItem("userName")
 }

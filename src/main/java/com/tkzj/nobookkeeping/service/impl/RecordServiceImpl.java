@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class RecordServiceImpl implements RecordService {
     @Autowired
@@ -29,7 +30,7 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public List<Record> showRecordsOfSelectedDates(String from, String to) {//根据所选日期展示相关收支记录
-        return recordMapper.getRecordsByDate1AndDate2(from, to);
+    public List<Record> showRecordsOfSelectedDates(int accountId, int inOut, String startTime, String endTime) {//根据所选日期展示相关收支记录
+        return recordMapper.getRecordsByDate1AndDate2(accountId, inOut, startTime, endTime);
     }
 }

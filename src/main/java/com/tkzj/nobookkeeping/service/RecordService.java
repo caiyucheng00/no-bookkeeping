@@ -11,5 +11,5 @@ public interface RecordService {
     boolean addRecordIntoCurrentAccount(Record record);//为当前账本新增一条收支记录
     boolean deleteRecordByRecordId(int recordId);//删除当前账本内的一条收收支记录
 
-    List<Record> showRecordsOfSelectedDates(String from, String to);
+    List<Record> showRecordsOfSelectedDates(int accountId, int inOut, String startTime, String endTime);
 }

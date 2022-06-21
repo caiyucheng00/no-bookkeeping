@@ -20,7 +20,16 @@
     </select>
 
     <select id="getRecordsByDate1AndDate2" resultMap="recordResultMap">
-        select * from record where Date(date) between #{from} and #{to}
+        select * from record
+        <where>
+            account_id = #{accountId}
+            <if test="inOut != '' and inOut != null">
+                and in_out = #{inOut}
+            </if>
+            <if test="startTime != '' and startTime != null and endTime != '' and endTime != null">
+                and `date` BETWEEN #{startTime} AND #{endTime};
+            </if>
+        </where>
     </select>
 
 <!--    注意字段的插入顺序-->

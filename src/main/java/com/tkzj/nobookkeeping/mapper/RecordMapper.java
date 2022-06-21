@@ -11,5 +11,5 @@ public interface RecordMapper {
     List<Record> getRecordsByAccountId(int accountId);
     int addRecord(Record record);
     int deleteByRecordId(int recordId);
-    List<Record> getRecordsByDate1AndDate2(String from, String to);
+    List<Record> getRecordsByDate1AndDate2(int accountId, int inOut, String startTime, String endTime);
 }

@@ -18,13 +18,6 @@ function sendAJAXGet1(callback) {
     xmlHttp.send();
 }
 
-/* function resAJAXGet() {
-    sendAJAXGet(function () {
-        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
-            var res = JSON.parse(xmlHttp.responseText);
-        }
-    })
-} */
 window.onload = function () {
     sendAJAXGet(function () {
         if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
@@ -37,17 +30,9 @@ window.onload = function () {
             book.innerHTML = str;
         }
     })
-    // sendAJAXGet1(function () {
-    //     if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
-    //         var res = JSON.parse(xmlHttp.responseText);
-    //         localStorage.setItem("userID", res.data.nickname)
-    //     } else {
-    //         localStorage.setItem("userID", "无名氏")
-    //     }
-    // })
-    // var userIdDon = document.getElementById('userName')
-    // userIdDon.innerHTML = localStorage.getItem("userID")
 
+    var userIdDon = document.getElementById('userName')
+    userIdDon.innerHTML = localStorage.getItem("userName")
 }
 
 // POST 新增账本
@@ -59,14 +44,6 @@ function sendAJAXPost(bookName, callback) {
     xmlHttp.send(JSON.stringify({"userId": userId, "accountName": bookName}));
 }
 
-/* function resAJAXPost() {
-    sendAJAXPost(function () {
-        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
-            var res = JSON.parse(xmlHttp.responseText);
-            window.alert(res.data);
-        }
-    })
-} */
 function addBook() {
     // 弹窗获取用户输入
     let bookName = prompt('请输入新账本名称：')
@@ -95,12 +72,3 @@ function goDetail(e){
     // 跳转页面
     window.location.href='./detail.html?accountId='+ accountId
 }
-
-
-/* function resAJAXGet() {
-    sendAJAXGet1(function () {
-        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
-            var res = JSON.parse(xmlHttp.responseText);
-        }
-    })
-} */
