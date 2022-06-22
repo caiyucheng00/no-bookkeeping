@@ -11,4 +11,5 @@ import java.util.List;
  */
 public interface UserService {
     User queryByNameAndPassword(User user);
+    boolean register(User user);
 }

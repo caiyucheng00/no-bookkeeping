@@ -23,15 +23,15 @@
         <div class="formArea">
             <p>注册</p>
             <form>
-                <input type="text" name="username" placeholder="用户名" id="username"autocomplete='username' >
+                <input type="text" name="username" placeholder="用户名" id="new-username"autocomplete='username' >
                 <br>
-                <input type="password" name="password" placeholder="6-16位密码，区分大小写" id="password" autocomplete='new-password'>
+                <input type="password" name="password" placeholder="6-16位密码，区分大小写" id="new-password" autocomplete='new-password'>
                 <br>
                 <input type="password" name="confirm_password" placeholder="确认密码" id="confirm_password" autocomplete='old-password'>
                 <br>
-                <input type="submit" class="submit" value="注册" onclick=resAJAXPost()>
+                <div id="submit" class="formArea"  onclick=resAJAXRegister()>注册</div>
 
-                <a href="#">使用已有账户登录</a>
+                <a href="login.html">使用已有账户登录</a>
             </form>
         </div>
     </div>

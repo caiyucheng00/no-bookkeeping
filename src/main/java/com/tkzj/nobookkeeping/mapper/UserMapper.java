@@ -14,4 +14,5 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
     List<User> queryByNameAndPassword(@Param("user") User user);
+    Integer register(User user);
 }

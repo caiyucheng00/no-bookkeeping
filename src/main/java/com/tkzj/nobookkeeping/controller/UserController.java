@@ -38,4 +38,17 @@ public class UserController {
             return Result.error("用户名或密码不存在");
         }
     }
+
+    @PostMapping("/register")
+    public Result<String> register(@RequestBody Map<String, String> map){
+        User user = new User();
+        user.setUserName(map.get("username"));
+        user.setUserPassword(map.get("password"));
+        boolean b = userService.register(user);
+        if(b){
+            return Result.success("success");
+        }else {
+            return Result.error("error");
+        }
+    }
 }

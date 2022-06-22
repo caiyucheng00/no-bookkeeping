@@ -30,3 +30,31 @@ function resAJAXPost() {
         }
     })
 }
+
+//register
+//POST
+function sendAJAXRegister(callback) {
+    let inputName = document.getElementById("new-username")
+    let username = inputName.value
+    let inputPassword = document.getElementById("new-password")
+    let password = inputPassword.value
+    xmlHttp.onreadystatechange = callback;
+    xmlHttp.open("POST", "/user/register");
+    xmlHttp.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+    xmlHttp.send(JSON.stringify({ "username": username, "password": password }));
+}
+
+function resAJAXRegister() {
+    sendAJAXRegister(function () {
+        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+            var res = JSON.parse(xmlHttp.responseText);
+            if(res.code===1){
+                window.alert("注册成功")
+                // 跳转页面
+                window.location.href='./login.html'
+            }else{
+                window.alert("账号或密码错误")
+            }
+        }
+    })
+}

@@ -25,4 +25,10 @@ public class UserServiceImpl implements UserService {
         System.out.println(userList);
         return userList.get(0);
     }
+
+    @Override
+    public boolean register(User user) {
+        Integer i = userMapper.register(user);
+        return i != 0;
+    }
 }
